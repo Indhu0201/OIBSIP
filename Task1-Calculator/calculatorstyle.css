@@ -1,0 +1,122 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  height: 100vh;
+   background: linear-gradient(135deg, #d3dedd, #8ed2c4);
+  background-size: cover;
+  color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-wrapper {
+  background: #0b1630;
+  padding: 20px 25px;
+  border-radius: 18px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0);
+  width: 380px;
+}
+
+.screen {
+  width: 100%;
+  height: 70px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f7fa;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+button {
+  padding: 18px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #edf2f9;
+  color: #1a1a1a;
+  box-shadow: 0 6px 0 #d6dbe3, 0 8px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #cce2ff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 #99c2ff, 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Active press effect */
+button:active {
+  background-color: #99c2ff;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #669acc, 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Operator buttons */
+.operator-btn {
+  background-color: #2f80ed;
+  color: #fff;
+  box-shadow: 0 6px 0 #1e5ec4, 0 8px 15px rgba(47, 128, 237, 0.4);
+}
+
+.operator-btn:hover {
+  background-color: #1662d8;
+  box-shadow: 0 8px 0 #124aa3, 0 12px 24px rgba(22, 98, 216, 0.6);
+}
+
+.operator-btn:active {
+  background-color: #104c9c;
+  box-shadow: 0 3px 0 #0c3573, 0 6px 12px rgba(16, 76, 156, 0.8);
+}
+
+/* Action buttons (AC, DEL) */
+.action-btn {
+  background-color: #f35c5c;
+  color: #fff;
+  box-shadow: 0 6px 0 #c24545, 0 8px 15px rgba(243, 92, 92, 0.4);
+}
+
+.action-btn:hover {
+  background-color: #d93d3d;
+  box-shadow: 0 8px 0 #9e2f2f, 0 12px 24px rgba(217, 61, 61, 0.6);
+}
+
+.action-btn:active {
+  background-color: #b62a2a;
+  box-shadow: 0 3px 0 #7f1f1f, 0 6px 12px rgba(182, 42, 42, 0.8);
+}
+
+/* Equal button */
+.equal-btn {
+  background-color: #27ae60;
+  color: white;
+  box-shadow: 0 6px 0 #1d8648, 0 8px 15px rgba(39, 174, 96, 0.4);
+}
+
+.equal-btn:hover {
+  background-color: #219150;
+  box-shadow: 0 8px 0 #17673a, 0 12px 24px rgba(33, 145, 80, 0.6);
+}
+
+.equal-btn:active {
+  background-color: #1a7741;
+  box-shadow: 0 3px 0 #12532e, 0 6px 12px rgba(26, 119, 65, 0.8);
+}

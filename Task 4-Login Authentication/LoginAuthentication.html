@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Login System 🔐</title>
+  <link rel="stylesheet" href="LoginAuthentication.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="formHeading">Login</h2>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="form active-form" autocomplete="off">
+      <input type="text" id="loginUser" placeholder="👤 Username" required autocomplete="off" />
+      <input type="password" id="loginPass" placeholder="🔒 Password" required autocomplete="new-password" />
+      
+      <div class="actions-row">
+        <button type="submit" class="primary-btn">Submit 🚀</button>
+        <a href="#" id="forgotLink" class="forgot-link">Forgot Password?</a>
+      </div>
+      
+      <button type="button" id="showRegisterBtn" class="secondary-btn">Register 📝</button>
+    </form>
+
+    <!-- Forgot Password Form -->
+    <form id="forgotForm" class="form" autocomplete="off">
+      <input type="password" id="newPass" placeholder="Create Password 🔑" required autocomplete="new-password" />
+      <input type="password" id="confirmNewPass" placeholder="Confirm Password 🔒" required autocomplete="new-password" />
+      <div id="forgotPassStrength" class="strength-meter"></div>
+      <button type="submit" class="primary-btn">Update Password 🔄</button>
+      <button type="button" id="cancelForgotBtn" class="secondary-btn">Cancel ❌</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="form" autocomplete="off">
+      <input type="email" id="regEmail" placeholder="📧 Email" required autocomplete="off" />
+      <input type="text" id="regUserId" placeholder="👤 User ID" required autocomplete="off" />
+      <input type="password" id="regPass" placeholder="Create Password 🔑" required autocomplete="new-password" />
+      <input type="password" id="regConfirmPass" placeholder="Confirm Password 🔒" required autocomplete="new-password" />
+      <div id="registerPassStrength" class="strength-meter"></div>
+      <label>
+        <input type="checkbox" id="regRememberMe" /> Remember Me ✅
+      </label>
+      <button type="submit" class="primary-btn">Register 🎉</button>
+      <button type="button" id="cancelRegisterBtn" class="secondary-btn">Cancel ❌</button>
+    </form>
+  </div>
+
+  <script src="LoginAuthentication.js"></script>
+</body>
+</html>

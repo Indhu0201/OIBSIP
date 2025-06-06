@@ -1,0 +1,205 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 1s ease;
+  filter: blur(12px);
+  animation: blurClear 1.2s forwards 0.8s;
+}
+
+@keyframes blurClear {
+  to {
+    filter: blur(0);
+  }
+}
+
+.container {
+  background: white;
+  padding: 35px 40px;
+  border-radius: 15px;
+  width: 360px;
+  box-shadow: 0 6px 20px rgba(255, 110, 127, 0.4);
+  text-align: center;
+}
+
+/* Heading with emoji and hover effect */
+h2 {
+  margin-bottom: 25px;
+  color: #333;
+  transition: color 0.4s ease;
+  user-select: none;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h2::after {
+  content: " 🔐";
+  font-size: 1.2rem;
+  margin-left: 8px;
+  transition: transform 0.4s ease;
+}
+
+h2:hover {
+  color: #ff6e7f;
+  cursor: default;
+}
+
+h2:hover::after {
+  transform: rotate(20deg) scale(1.2);
+}
+
+/* Forms hidden by default except active */
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.active-form {
+  display: flex;
+}
+
+/* Inputs styling */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 12px 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input hover and focus colorful glow */
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #ff6e7f;
+  box-shadow: 0 0 8px #ff6e7f88;
+  outline: none;
+}
+
+/* Buttons */
+.primary-btn {
+  background: linear-gradient(45deg, #ff6e7f, #ff9472);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 110, 127, 0.6);
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(45deg, #ff9472, #ff6e7f);
+  box-shadow: 0 6px 14px rgba(255, 110, 127, 0.8);
+  transform: scale(1.1);
+}
+
+.secondary-btn {
+  background-color: #bfe9ff;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn::after {
+  content: " ➡️";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+.secondary-btn:hover {
+  background-color: #8fd3f4;
+  transform: scale(1.05);
+}
+
+.secondary-btn:hover::after {
+  opacity: 1;
+}
+
+/* Forgot Password Link styling */
+.forgot-link {
+  color: #ff6e7f;
+  font-weight: 600;
+  text-decoration: none;
+  align-self: center;
+  margin-left: 15px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.forgot-link:hover {
+  color: #ff9472;
+  text-decoration: underline;
+}
+
+/* Row for submit button and forgot link */
+.actions-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Password strength meter */
+.strength-meter {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.strength-meter.strength-weak {
+  color: #d9534f;
+}
+
+.strength-meter.strength-medium {
+  color: #f0ad4e;
+}
+
+.strength-meter.strength-strong {
+  color: #5cb85c;
+}
+
+/* Strength text with emojis before */
+.strength-weak::before {
+  content: "⚠️ ";
+}
+
+.strength-medium::before {
+  content: "👍 ";
+}
+
+.strength-strong::before {
+  content: "🔥 ";
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📋 Smart To-Do List</title>
+  <link rel="stylesheet" href="to-do list.css" />
+</head>
+<body>
+  <header>
+    <h1>📋 Smart To-Do list</h1>
+    <button id="toggle-theme">🌓 Toggle Theme</button>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input type="text" id="taskTitle" placeholder="🎯 Task title..." />
+      <textarea id="taskDesc" placeholder="📝 Task description..."></textarea>
+      <select id="taskPriority">
+        <option value="low">🟢 Low</option>
+        <option value="medium">🟡 Medium</option>
+        <option value="high">🔴 High</option>
+      </select>
+      <select id="taskCategory">
+        <option value="work">💼 Work</option>
+        <option value="personal">🏠 Personal</option>
+        <option value="study">📚 Study</option>
+      </select>
+      <input type="date" id="taskDue" />
+      <button onclick="addTask()">➕ Add Task</button>
+    </section>
+
+    <input type="text" id="searchBox" placeholder="🔍 Search tasks..." />
+
+    <section class="task-sections">
+      <div class="task-column">
+        <h2>🕓 Pending Tasks</h2>
+        <ul id="pendingTasks"></ul>
+      </div>
+      <div class="task-column">
+        <h2>✅ Completed Tasks</h2>
+        <ul id="completedTasks"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by [Nadakuditi Indhu] | Oasis Infobyte Internship</p>
+  </footer>
+
+  <script src="to-do-list.js"></script>
+</body>
+</html>
